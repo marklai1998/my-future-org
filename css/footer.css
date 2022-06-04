@@ -1,0 +1,52 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+	min-width:600px;
+    color: #aaaaaa;
+    padding: 15px;
+    margin-top: 35px;
+    background-color: #232323;
+	line-height:22px;
+}
+
+.footer a{
+    color: #FFFFFF;
+}
+
+.footer a:hover{
+    color: #aaaaaa;
+}
+
+.devbox {
+    float: right;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.devbox div {
+	background-color:#FFFFFF;
+	color: #5F5F5F;
+    max-height: 0;
+    overflow: hidden;
+    bottom: 100%;
+    right: 0;
+	padding: 0 20px;
+	font-size:20px;
+    -webkit-transition-property: max-height,padding; /* Safari */
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-property: max-height,padding;
+    transition-duration: 1s;
+}
+
+.devbox > div {
+    position: absolute;
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.50);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.50);
+}
+
+.devbox-show div {
+    max-height: 250px;
+	padding:20px;
+}

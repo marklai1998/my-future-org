@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Future</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.js"></script>
+    <!--Script Start---->
+    <script>
+        $(window).on('load', function () {
+            $(".loading").fadeOut("slow");
+        });
+        $(document).ready(function () {
+            $('#list').click(function () {
+                if ($(this).parent('#menu').hasClass('menu-show')) {
+                    $(this).parent('#menu').removeClass('menu-show');
+                } else {
+                    $(this).parent('#menu').addClass('menu-show');
+                }
+            });
+            $(window).scroll(function () {
+                console.log($(window).scrollTop());
+                if ($(window).scrollTop() > 0.1) {
+                    $('#header').addClass('header-fixed');
+                } else {
+                    $('#header').removeClass('header-fixed');
+                }
+            });
+            $('.devbox').click(function () {
+                if ($(this).hasClass('devbox-show')) {
+                    $(this).removeClass('devbox-show');
+                    $(this).find('.fa').removeClass('show-arrow-up');
+                } else {
+                    $(this).addClass('devbox-show');
+                    $(this).find('.fa').addClass('show-arrow-up');
+                }
+            });
+			$('.style-1').click(function () {
+                $('.news-table').removeClass('hide');
+				$(this).addClass('hide');
+            });
+        });
+    </script>
+    <!--Script End---->
+</head>
+<body>
+<!--Loading Screen Start-->
+<div class="loading">
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+</div>
+<!--Loading Screen End-->
+<!--Header Start---->
+<div id="header" class="header">
+    <div class="container">
+        <a href="index.html"><img src="img/favicon.png" class="logo"></a>
+        <ul class="hidden-xs">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about_us.html">ABOUT US</a></li>
+            <li><a href="how_we_work.html">HOW WE WORK</a></li>
+            <li><a href="our_stories.html">OUR STORIES</a></li>
+            <li class="active"><a href="news.html">NEWS</a></li>
+            <li><a href="support_us.html">SUPPORT US</a></li>
+            <li><a href="contact_us.html">CONTACT US</a></li>
+			<li><a href="https://www.facebook.com/My-Future-264755117278758/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+</div>
+<div class="menu visible-xs-block" id="menu">
+    <a id="list"><i class="fa fa-bars"></i>Menu</a>
+	<a href="https://www.facebook.com/My-Future-264755117278758/" style="float:right"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about_us.html">ABOUT US</a></li>
+        <li><a href="how_we_work.html">HOW WE WORK</a></li>
+        <li><a href="our_stories.html">OUR STORIES</a></li>
+        <li class="active"><a href="news.html">NEWS</a></li>
+        <li><a href="support_us.html">SUPPORT US</a></li>
+        <li><a href="contact_us.html">CONTACT US</a></li>
+    </ul>
+</div>
+<div class="head-separator"></div>
+<!--Header End-->
+<div class="container">
+    <h2>News</h2>
+    <hr>
+    <div style="margin:20px;">
+        <h3>Events</h3>
+        <table class="news-table">
+            <tr>
+                <th>17-03-2017</th>
+                <td>Here is the title</td>
+            </tr>
+            <tr>
+                <th>17-03-2017</th>
+                <td>Here is the title</td>
+            </tr>
+            <tr>
+                <th>17-03-2017</th>
+                <td>Here is the title</td>
+            </tr>
+        </table>
+		<table class="news-table hide">
+            <tr>
+                <th>17-03-2017</th>
+                <td>Here is the title</td>
+            </tr>
+            <tr>
+                <th>17-03-2017</th>
+                <td>Here is the title</td>
+            </tr>
+            <tr>
+                <th>17-03-2017</th>
+                <td>Here is the title</td>
+            </tr>
+        </table>
+		<div class="col-lg-12 text-center" style="padding:50px;">
+			<a class="style-1">Learn more</a>
+		</div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<!--Footer Start-->
+<div class="footer">
+    My Future @2017. All rights reserved. <br>
+	<a href="terms_and_conditions.html">Terms & Conditions</a> &nbsp;|&nbsp; <a href="privacy_policy.html">Privacy Policy</a>
+    <div class="devbox">
+        <div>
+            Website developed by students from<br>
+            VTC’s Cloud & Data Centre Administration IVE(LWL) 2017 - 2018
+            <hr>
+            Lai Kam To<br>
+            Pang Chin Wing<br>
+            Ng Ka Yin<br>
+        </div>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>Web Developer
+    </div>
+</div>
+<!--Footer End-->
+</body>
+</html>

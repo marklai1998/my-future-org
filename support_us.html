@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Future</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.js"></script>
+    <!--Script Start---->
+	
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCQDKhVP4B37pqzeninQ-vRgO54akN7Ft4&extension=.js&language=en&region=UK"></script>
+	<script src="http://cdn.mapkit.io/v1/infobox.js"></script>
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+	<link href="http://cdn.mapkit.io/v1/infobox.css" rel="stylesheet">
+	<script src="js/map.js"></script>
+    <script>
+        var interval = setInterval(function () {
+            $('.auto-scroll').animate({scrollLeft: "+=" + 1}, 1);
+        }, 1);
+        $(window).on('load', function () {
+            $(".loading").fadeOut("slow");
+        });
+        $(document).ready(function () {
+            $('#list').click(function () {
+                if ($(this).parent('#menu').hasClass('menu-show')) {
+                    $(this).parent('#menu').removeClass('menu-show');
+                } else {
+                    $(this).parent('#menu').addClass('menu-show');
+                }
+            });
+            $(window).scroll(function () {
+                console.log($(window).scrollTop());
+                if ($(window).scrollTop() > 0.1) {
+                    $('#header').addClass('header-fixed');
+                } else {
+                    $('#header').removeClass('header-fixed');
+                }
+            });
+            $('.devbox').click(function () {
+                if ($(this).hasClass('devbox-show')) {
+                    $(this).removeClass('devbox-show');
+                    $(this).find('.fa').removeClass('show-arrow-up');
+                } else {
+                    $(this).addClass('devbox-show');
+                    $(this).find('.fa').addClass('show-arrow-up');
+                }
+            });
+			$('a[href="#school"]').on('shown.bs.tab', function (e) { 
+				init(); // google map init function
+			});
+        });
+    </script>
+    <!--Script End---->
+</head>
+<body>
+<!--Loading Screen Start-->
+<div class="loading">
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+</div>
+<!--Loading Screen End-->
+<!--Header Start---->
+<div id="header" class="header">
+    <div class="container">
+        <a href="index.html"><img src="img/favicon.png" class="logo"></a>
+        <ul class="hidden-xs">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about_us.html">ABOUT US</a></li>
+            <li><a href="how_we_work.html">HOW WE WORK</a></li>
+            <li><a href="our_stories.html">OUR STORIES</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li class="active"><a href="support_us.html">SUPPORT US</a></li>
+            <li><a href="contact_us.html">CONTACT US</a></li>
+			<li><a href="https://www.facebook.com/My-Future-264755117278758/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+</div>
+<div class="menu visible-xs-block" id="menu">
+    <a id="list"><i class="fa fa-bars"></i>Menu</a>
+	<a href="https://www.facebook.com/My-Future-264755117278758/" style="float:right"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about_us.html">ABOUT US</a></li>
+        <li><a href="how_we_work.html">HOW WE WORK</a></li>
+        <li><a href="our_stories.html">OUR STORIES</a></li>
+        <li><a href="news.html">NEWS</a></li>
+        <li class="active"><a href="support_us.html">SUPPORT US</a></li>
+        <li><a href="contact_us.html">CONTACT US</a></li>
+    </ul>
+</div>
+<div class="head-separator"></div>
+<!--Header End-->
+<div class="container">
+	<div class="tab-content">
+		<div id="partner" class="tab-pane fade in active">
+			<div class="col-xs-12 col-md-9 col-md-push-3">
+				<h3 class="text-center">Corporate Partners</h3>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+					<div class="partner-box">
+						<a class="fill-divs" href="http://www.apcap.com/">
+							<img src="img/Partners/Atlantic-Pacific-Capital.png">
+							<div>
+								<div class="box-separator"></div>
+								<h4>Atlantic Pacific Capital</h4>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+					<div class="partner-box">
+						<a class="fill-divs" href="http://www.cityline.com/">
+							<img src="img/Partners/cityline.png">
+							<div>
+								<div class="box-separator"></div>
+								<h4>Cityline</h4>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+					<div class="partner-box">
+						<a class="fill-divs" href="http://www.lark.com.hk/">
+							<img src="img/Partners/Lark-International-Group.png">
+							<div>
+								<div class="box-separator"></div>
+								<h4>Lark International Group</h4>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+					<div class="partner-box">
+						<a class="fill-divs" href="http://www.trappistdairy.hk/">
+							<img src="img/Partners/Trappist-Dairy.png">
+							<div>
+								<div class="box-separator"></div>
+								<h4>Trappist Dairy</h4>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+					<div class="partner-box">
+						<a class="fill-divs" href="https://www.uacinemas.com.hk/">
+							<img src="img/Partners/UA-Cinemas.png">
+							<div>
+								<div class="box-separator"></div>
+								<h4>UA Cinemas</h4>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+					<div class="partner-box">
+						<a class="fill-divs" href="https://www.wingonet.com/">
+							<img src="img/Partners/wing-on.png">
+							<div>
+								<div class="box-separator"></div>
+								<h4>Wing On</h4>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+					<div class="partner-box">
+						<a class="fill-divs" href="https://www.wingonet.com/">
+							<img src="img/Partners/wing-on-plus.png">
+							<div>
+								<div class="box-separator"></div>
+								<h4>Wing On Plus</h4>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="ngo" class="tab-pane fade in">
+			<div class="col-xs-12 col-md-9 col-md-push-3">
+				<h3 class="text-center">Supporting charitable organisations</h3>
+				<div class="box" style="margin-bottom:20px">Cambridge Hughes Hall Alumni Association</div>
+				<div class="box" style="margin-bottom:20px">Equilibrium Cultural Education Foundation</div>
+				<div class="box" style="margin-bottom:20px">Gideon Centre</div>
+				<div class="box" style="margin-bottom:20px">
+					<a href="http://www.jahk.org/">Junior Achievement (JA), HK Chapter</a>
+				</div>
+				<div class="box" style="margin-bottom:20px">More coming soon...</div>
+			</div>
+		</div>
+		<div id="school" class="tab-pane fade in">
+			<div class="col-xs-12 col-md-9 col-md-push-3">
+				<h3 class="text-center">Partner Schools</h3>
+				<div id='map' class="col-xs-12" style="height: 700px"></div>
+				<div class="clearfix"></div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.cfs.edu.hk/">Caritas Fanling Chan Chun Ha Secondary School</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.ks.edu.hk/">CCC Kei San Secondary School</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.caswcmc.edu.hk/">Christian Alliance S W Chan Memorial College</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.delasalle.edu.hk/">De La Salle Secondary School, N.T.</a>
+					</div>
+				</div>
+				<div class="col-lg-7 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.elegantia.edu.hk/">Elegantia College (Sponsored By Education Convergence)</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.fgss.edu.hk/">Fanling Government Secondary School</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.fkyc.edu.hk/">Fanling Kau Yan College</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.flss.edu.hk/">Fanling Lutheran Secondary School</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.frcss.edu.hk/">Fanling Rhenish Church Secondary School</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.fklmstss.edu.hk/">Fung Kai Liu Man Shek Tong Secondary School</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.fk1ss.edu.hk/">Fung Kai No.1 Secondary School</a>
+					</div>
+				</div>
+				<div class="col-lg-8 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.bmkc.edu.hk/">HHCKLA Buddhist Ma Kam Chan Memorial English Secondary School</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.tanghin.edu.hk/">HKTA Tang Hin Memorial Secondary School</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.plkmkmc.edu.hk/">PLK Ma Kam Ming College</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.ssgss.edu.hk/">Sheung Shui Government Secondary School</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.skhcyss.edu.hk/">SKH Chan Young Secondary School</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.sfac.edu.hk/">St Francis Of Assisi's College</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.tkpss.edu.hk/">Tin Ka Ping Secondary School</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.twghkyds.edu.hk/">TWGHs Kap Yan Directors' College</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">
+						<a href="http://www.twghlkss.edu.hk/">TWGHs Li Ka Shing College</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-xs-12">
+					<div class="box" style="margin:5px">More coming soon...</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-3 col-md-pull-9">
+        <div class="side-list">
+            <ul>
+                <li><a>SUPPORT US</a></li>
+                <li><a href="#partner" data-toggle="tab">Corporate Partners</a></li>
+                <li><a href="#ngo" data-toggle="tab">Partner NGOs</a></li>
+                <li><a href="#school" data-toggle="tab">Partner Schools</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<!--Footer Start-->
+<div class="footer">
+    My Future @2017. All rights reserved. <br>
+	<a href="terms_and_conditions.html">Terms & Conditions</a> &nbsp;|&nbsp; <a href="privacy_policy.html">Privacy Policy</a>
+    <div class="devbox">
+        <div>
+            Website developed by students from<br>
+            VTC’s Cloud & Data Centre Administration IVE(LWL) 2017 - 2018
+            <hr>
+            Lai Kam To<br>
+            Pang Chin Wing<br>
+            Ng Ka Yin<br>
+        </div>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>Web Developer
+    </div>
+</div>
+<!--Footer End-->
+</body>
+</html>

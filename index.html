@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Future</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.js"></script>
+    <!--Script Start---->
+    <script>
+        $(window).on('load', function () {
+            $(".loading").fadeOut("slow");
+        });
+        $(document).ready(function () {
+            $('#list').click(function () {
+                if ($(this).parent('#menu').hasClass('menu-show')) {
+                    $(this).parent('#menu').removeClass('menu-show');
+                } else {
+                    $(this).parent('#menu').addClass('menu-show');
+                }
+            });
+            $(window).scroll(function () {
+                console.log($(window).scrollTop());
+                if ($(window).scrollTop() > 0.1) {
+                    $('#header').addClass('header-fixed');
+                } else {
+                    $('#header').removeClass('header-fixed');
+                }
+            });
+            $('.devbox').click(function () {
+                if ($(this).hasClass('devbox-show')) {
+                    $(this).removeClass('devbox-show');
+                    $(this).find('.fa').removeClass('show-arrow-up');
+                } else {
+                    $(this).addClass('devbox-show');
+                    $(this).find('.fa').addClass('show-arrow-up');
+                }
+            });
+        });
+    </script>
+    <!--Script End---->
+</head>
+<body>
+<!--Loading Screen Start-->
+<div class="loading">
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+</div>
+<!--Loading Screen End-->
+<!--Header Start---->
+<div id="header" class="header">
+    <div class="container">
+        <a href="index.html"><img src="img/favicon.png" class="logo"></a>
+        <ul class="hidden-xs">
+            <li class="active"><a href="index.html">HOME</a></li>
+            <li><a href="about_us.html">ABOUT US</a></li>
+            <li><a href="how_we_work.html">HOW WE WORK</a></li>
+            <li><a href="our_stories.html">OUR STORIES</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="support_us.html">SUPPORT US</a></li>
+            <li><a href="contact_us.html">CONTACT US</a></li>
+			<li><a href="https://www.facebook.com/My-Future-264755117278758/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+</div>
+<div class="menu visible-xs-block" id="menu">
+    <a id="list"><i class="fa fa-bars"></i>Menu</a>
+	<a href="https://www.facebook.com/My-Future-264755117278758/" style="float:right"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <ul>
+        <li class="active"><a href="index.html">HOME</a></li>
+        <li><a href="about_us.html">ABOUT US</a></li>
+        <li><a href="how_we_work.html">HOW WE WORK</a></li>
+        <li><a href="our_stories.html">OUR STORIES</a></li>
+        <li><a href="news.html">NEWS</a></li>
+        <li><a href="support_us.html">SUPPORT US</a></li>
+        <li><a href="contact_us.html">CONTACT US</a></li>
+    </ul>
+</div>
+<!--Header End-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+		<li data-target="#myCarousel" data-slide-to="5"></li>
+    </ul>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="img/Slide/img5.png">
+            <div class="slide-caption">
+                Work life experience program
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/Slide/img3.png">
+            <div class="slide-caption">
+                Education and business partnership
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/Slide/img2.png">
+            <div class="slide-caption">
+                Exposure for secondary school students
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/Slide/img6.png">
+            <div class="slide-caption">
+                Student mentorship
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/Slide/img1.png">
+            <div class="slide-caption">
+                Understand our ever-changing society
+            </div>
+        </div>
+		<div class="item">
+            <img src="img/Slide/img7.png">
+        </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-xs-6">
+            <div class="info-box" style="background-image:url('img/title1.png')">
+                <a href="about_us.html" class="fill-div">
+                    <div>
+                        <div class="box-separator"></div>
+                        <h4>Our background</h4>
+                        Know more about us
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="info-box" style="background-image:url('img/title2.png')">
+                <a href="support_us.html" class="fill-div">
+                    <div>
+                        <div class="box-separator"></div>
+                        <h4>Support us</h4>
+                        Become one of our supporters
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <div class="info-box" style="background-image:url('img/title3.png')">
+                <a href="contact_us.html" class="fill-div">
+                    <div>
+                        <div class="box-separator"></div>
+                        <h4>Contact us</h4>
+                        Chat with us
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <hr>
+    <div class="col-lg-5 col-md-12" style="font-weight:bold;font-size:20px;padding:0">
+        Meaningful summer work life experience<br>
+        - Engage students in real life working environment<br>
+        - Broaden exposure<br>
+        - Learn from supervisor and mentor
+    </div>
+    <hr class="col-xs-12 visible-md-block visible-sm-block visible-xs-block">
+    <div class="col-lg-7 col-md-12">
+        In mid-2016, a group of professionals considered it necessary to find ways to help young people aged
+        16-18
+        to understand our ever-changing society as part of their preparation for a working life before their
+        completion of secondary education.
+        <br/>
+        <br/>
+        The Organising Committee comprises of experienced people from diverse professions: social work, law
+        enforcement, law, finance, government, entertainment, education and property development.
+        <br/>
+        <br/>
+        Supporting charitable organisations include Cambridge Hughes Hall Alumni Association, Equilibrium Cultural
+        Education Foundation, Junior Achievement (JA), HK Chapter and Gideon Centre.
+        <br/>
+    </div>
+    <div class="col-lg-12 text-center" style="padding:50px;">
+        <a class="style-1" href="about_us.html">Go To Our Background</a>
+    </div>
+</div>
+<!--Footer Start-->
+<div class="footer">
+    My Future @2017. All rights reserved. <br>
+	<a href="terms_and_conditions.html">Terms & Conditions</a> &nbsp;|&nbsp; <a href="privacy_policy.html">Privacy Policy</a>
+    <div class="devbox">
+        <div>
+            Website developed by students from<br>
+            VTC’s Cloud & Data Centre Administration IVE(LWL) 2017 - 2018
+            <hr>
+            Lai Kam To<br>
+            Pang Chin Wing<br>
+            Ng Ka Yin<br>
+        </div>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>Web Developer
+    </div>
+</div>
+<!--Footer End-->
+</body>
+</html>

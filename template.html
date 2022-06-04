@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Future</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Optional theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.js"></script>
+    <!--Loading Screen Start-->
+    <script>
+        $(window).load(function () {
+            $(".loading").fadeOut("slow");
+        });
+    </script>
+    <!--Loading Screen End-->
+    <!--Header Start---->
+    <script>
+        $(document).ready(function () {
+            $('#list').click(function () {
+                if ($('#menu').hasClass('menu-show')) {
+                    $('#menu').removeClass('menu-show');
+                } else {
+                    $('#menu').addClass('menu-show');
+                }
+            });
+            $(window).scroll(function () {
+                console.log($(window).scrollTop());
+                if ($(window).scrollTop() > 50) {
+                    $('#header').addClass('header-fixed');
+                }
+                if ($(window).scrollTop() < 50) {
+                    $('#header').removeClass('header-fixed');
+                }
+            });
+        });
+    </script>
+    <!--Header End---->
+</head>
+<body>
+<!--Loading Screen Start-->
+<div class="loading">
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+</div>
+<!--Loading Screen End-->
+<!--Header Start---->
+<div id="header" class="header">
+    <div class="container">
+        <img src="img/favicon.png" class="logo">
+        <ul class="hidden-xs">
+            <li class="active"><a href="index.html">HOME</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            <li><a href="howwework.html">HOW WE WORK</a></li>
+            <li><a href="ourstories.html">OUR STORIES</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="supportus.html">SUPPORT US</a></li>
+            <li><a href="contactus.html">CONTACT US</a></li>
+        </ul>
+    </div>
+</div>
+<div class="menu visible-xs-block" id="menu">
+    <img src="img/menu.png" style="width:20px;" id="list"><a
+        style="color:#FFF;margin:0 20px;font-size:20px;">Menu</a>
+    <ul>
+        <li class="active"><a href="index.html">HOME</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li><a href="howwework.html">HOW WE WORK</a></li>
+        <li><a href="ourstories.html">OUR STORIES</a></li>
+        <li><a href="news.html">NEWS</a></li>
+        <li><a href="supportus.html">SUPPORT US</a></li>
+        <li><a href="contactus.html">CONTACT US</a></li>
+    </ul>
+</div>
+<div class="head-separator"></div>
+<!--Header End-->
+
+
+<!--Footer Start-->
+<div class="footer">
+    My Future @2017. All rights reserved.
+</div>
+<!--Footer End-->
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Future</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.js"></script>
+    <!--Script Start---->
+    <script>
+        $(window).on('load', function () {
+            $(".loading").fadeOut("slow");
+        });
+        $(document).ready(function () {
+            $('#list').click(function () {
+                if ($(this).parent('#menu').hasClass('menu-show')) {
+                    $(this).parent('#menu').removeClass('menu-show');
+                } else {
+                    $(this).parent('#menu').addClass('menu-show');
+                }
+            });
+            $(window).scroll(function () {
+                console.log($(window).scrollTop());
+                if ($(window).scrollTop() > 0.1) {
+                    $('#header').addClass('header-fixed');
+                } else {
+                    $('#header').removeClass('header-fixed');
+                }
+            });
+            $('.devbox').click(function () {
+                if ($(this).hasClass('devbox-show')) {
+                    $(this).removeClass('devbox-show');
+                    $(this).find('.fa').removeClass('show-arrow-up');
+                } else {
+                    $(this).addClass('devbox-show');
+                    $(this).find('.fa').addClass('show-arrow-up');
+                }
+            });
+            $('.person').click(function () {
+				if($(this).next().hasClass('show-description')){
+					$(this).find('.fa').removeClass('show-arrow');
+					$(this).next().removeClass('show-description');
+				} else {
+					$('.fa').removeClass('show-arrow');
+					$('.show-description').removeClass('show-description');
+					$(this).find('.fa').addClass('show-arrow');
+					$(this).next().addClass('show-description');
+				}
+            });
+            $('.side-list').click(function () {
+                $('.fa').removeClass('show-arrow');
+                $('.show-description').removeClass('show-description');
+            });
+        });
+    </script>
+    <!--Script End---->
+</head>
+<body>
+<!--Loading Screen Start-->
+<div class="loading">
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+</div>
+<!--Loading Screen End-->
+<!--Header Start---->
+<div id="header" class="header">
+    <div class="container">
+        <a href="index.html"><img src="img/favicon.png" class="logo"></a>
+        <ul class="hidden-xs">
+            <li><a href="index.html">HOME</a></li>
+            <li class="active"><a href="about_us.html">ABOUT US</a></li>
+            <li><a href="how_we_work.html">HOW WE WORK</a></li>
+            <li><a href="our_stories.html">OUR STORIES</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="support_us.html">SUPPORT US</a></li>
+            <li><a href="contact_us.html">CONTACT US</a></li>
+			<li><a href="https://www.facebook.com/My-Future-264755117278758/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+</div>
+<div class="menu visible-xs-block" id="menu">
+    <a id="list"><i class="fa fa-bars"></i>Menu</a>
+	<a href="https://www.facebook.com/My-Future-264755117278758/" style="float:right"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li class="active"><a href="about_us.html">ABOUT US</a></li>
+        <li><a href="how_we_work.html">HOW WE WORK</a></li>
+        <li><a href="our_stories.html">OUR STORIES</a></li>
+        <li><a href="news.html">NEWS</a></li>
+        <li><a href="support_us.html">SUPPORT US</a></li>
+        <li><a href="contact_us.html">CONTACT US</a></li>
+    </ul>
+</div>
+<div class="head-separator"></div>
+<!--Header End-->
+<div class="container">
+    <div class="tab-content">
+        <div id="main" class="tab-pane fade in active">
+            <div class="hidden-sm hidden-xs col-md-3 col-md-offset-0 col-md-push-3">
+                <img src="img/logo-fullsize.png" class="img-responsive center-block"
+                     style="width:200px;margin:50px auto;" alt="logo">
+            </div>
+            <div class="col-xs-12 col-md-6 col-md-push-3">
+                <h2>Background</h2>
+                <hr>
+                In mid-2016, a group of professionals considered it necessary to find ways to help young people aged
+                16-18 to understand our ever-changing society as part of their preparation for a working life before
+                their completion of secondary education.
+                <br/>
+                <br/>
+                The Organising Committee comprises of experienced people from diverse professions: social work, law
+                enforcement, law, finance, government, entertainment, education and property development.
+                <br/>
+                <br/>
+                Supporting charitable organisations include Cambridge Hughes Hall Alumni Association, Equilibrium
+                Cultural Education Foundation, and Gideon Youth.
+            </div>
+        </div>
+        <div id="mission" class="tab-pane fade in">
+            <div class="col-xs-12 col-md-9 col-md-push-3">
+                <h2>Mission</h2>
+                <hr>
+                <a style="font-weight:bold;font-size:20px">
+                    Meaningful summer internships<br>
+                    - Engage students in real life working environment<br>
+                    - Broaden exposure <br>
+                    - Learn from supervisor and mentor
+                </a>
+            </div>
+        </div>
+        <div id="advisory" class="tab-pane fade in">
+            <div class="col-xs-12 col-md-9 col-md-push-3">
+                <h2>Advisory Board</h2>
+                <hr>
+                <div class="col-md-12">
+                    <table class="info-table">
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Ms. Edwina Lau, Chair</td>
+                            <td>Civil Service</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/Edwina_Lau.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                        <h4>Member of a disciplined services</h4>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Mr. Richard Khaw,SC,Vice-Chair</td>
+                            <td>Barrister</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/no.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Ms. Carol Wong</td>
+                            <td>Barrister</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/Carol_Wong.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                        <h4>Barrister-at-Law</h4>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Mr. Curtis Man</td>
+                            <td>Finance</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/no.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Dr. David Siu</td>
+                            <td>Social Work</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/no.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Mr. Ivan Wong</td>
+                            <td>Entertainment</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/Ivan_Wong.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                        <h4>Managing Director of UA Cinema Circuit Limited</h4>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Mr. Joseph Lee</td>
+                            <td>Information Technology</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/Joseph_Lee.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                        <h4>Senior management of an IT company</h4>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Ms. Priscilla Leung</td>
+                            <td>Social Work</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/no.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Mr. Sik-yan Tse</td>
+                            <td>Education</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/no.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="organising" class="tab-pane fade in">
+            <div class="col-xs-12 col-md-9 col-md-push-3">
+                <h2>Organising Team</h2>
+                <hr>
+                <div class="col-md-12">
+                    <table class="info-table">
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Mr. Robert Chan, Co-Convenor</td>
+                            <td>Solicitor</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/no.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Mr. Edwin Kwok, Co-Convenor</td>
+                            <td>Finance</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/no.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Mr. Winston Chiu, Co-Convenor</td>
+                            <td>Finance</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/Winston_Chiu.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                        <h4>Full-time father</h4><br>
+										Previously in the investment banking and private equity industries.
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Ms. Cecilia Li</td>
+                            <td>Finance</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/Cecilia_Li.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Ms. Ellen Wong</td>
+                            <td>Information Technology</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/Ellen_Wong.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                        <h4>Senior Manager</h4><br>
+										Business Development & Marketing in Cityline (Hong Kong) Limited
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Dr. Ernest Ng</td>
+                            <td>Finance</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/Ernest_Ng.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Ms. Joey Mak</td>
+                            <td>Entertainment</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/Joey_Mak.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Ms. Josephine Ho</td>
+                            <td>Property Development</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/no.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Ms. Kiki Chan</td>
+                            <td>Civil Service</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/Kiki_Chan.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Mr. Martin Mak</td>
+                            <td>Education</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/Martin_Mak.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Ms. Miki Yeung</td>
+                            <td>Entertainment</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/no.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="person">
+                            <td><i class="fa fa-angle-right" aria-hidden="true"></i></td>
+                            <td>Mr. Siu Hin</td>
+                            <td>Social Work</td>
+                        </tr>
+                        <tr class="description hidden-description">
+                            <td colspan="3">
+                                <div class="box">
+                                    <img src="img/About_Us/no.png" class="col-sm-3 col-xs-4">
+                                    <div class="col-sm-9 col-xs -8">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-3 col-md-pull-9">
+        <div class="side-list">
+            <ul>
+                <li><a href="#main" data-toggle="tab">ABOUT US</a></li>
+                <li><a href="#mission" data-toggle="tab">Mission</a></li>
+                <li><a href="#advisory" data-toggle="tab">Advisory Board</a></li>
+                <li><a href="#organising" data-toggle="tab">Organising Team</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div style="clear:both;"></div>
+<!--Footer Start-->
+<div class="footer">
+    My Future @2017. All rights reserved. <br>
+	<a href="terms_and_conditions.html">Terms & Conditions</a> &nbsp;|&nbsp; <a href="privacy_policy.html">Privacy Policy</a>
+    <div class="devbox">
+        <div>
+            Website developed by students from<br>
+            VTC’s Cloud & Data Centre Administration IVE(LWL) 2017 - 2018
+            <hr>
+            Lai Kam To<br>
+            Pang Chin Wing<br>
+            Ng Ka Yin<br>
+        </div>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>Web Developer
+    </div>
+</div>
+<!--Footer End-->
+</body>
+</html>

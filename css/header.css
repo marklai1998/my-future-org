@@ -1,0 +1,164 @@
+.logo {
+    -webkit-transition-property: margin; /* Safari */
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-property: margin;
+    transition-duration: 0.5s;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.75);
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    -webkit-transition-property: padding-top, background-color, height,top; /* Safari */
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-property: padding-top, background-color, height,top;
+    transition-duration: 0.5s;
+}
+
+.header ul {
+    float: right;
+    margin: auto 0;
+    text-align: center;
+    display: inline-block;
+    padding: 36px 0;
+    -webkit-transition-property: padding; /* Safari */
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-property: padding;
+    transition-duration: 0.5s;
+}
+
+.header li {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    -webkit-transition-property: color; /* Safari */
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+
+.menu {
+    width: 100%;
+    background-color: #337ab7;
+    padding: 20px 20px;
+}
+
+.menu ul {
+    height: 0;
+    margin: 0 20px;
+    -webkit-transition-property: height, margin; /* Safari */
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-property: height, margin;
+    transition-duration: 0.5s;
+}
+
+.menu li {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition-property: height; /* Safari */
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-property: height;
+    transition-duration: 0.5s;
+}
+
+.menu > a {
+    color: #FFF;
+    font-size: 20px;
+}
+
+.menu i {
+    margin-right: 20px;
+    font-size: 30px;
+    position: relative;
+    top: 3px
+}
+
+.menu-show ul {
+    margin: 50px 20px;
+    height: 300px;
+    -webkit-transition-property: height, margin; /* Safari */
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-property: height, margin;
+    transition-duration: 0.5s;
+}
+
+.menu-show li {
+    height: 20px;
+}
+
+.menu li {
+    color: #FFF;
+    margin-bottom: 30px;
+}
+
+.menu li a {
+    color: #FFF;
+}
+
+.header-fixed {
+    position: fixed;
+    z-index: 5;
+    background-color: #FFFFFF;
+    border-bottom: 6px solid rgba(51, 121, 255, .1);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+.header-fixed ul {
+    padding: 55px 0 0 0;
+}
+
+.head-separator {
+    height: 130px;
+}
+
+#list {
+    cursor: pointer;
+}
+
+@media all and (max-width: 1520px) {
+	.header {
+		top: 0;
+	}
+}
+
+@media all and (max-width: 1020px) {
+    .logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .header {
+		position:relative;
+        padding-top: 20px;
+    }
+
+    .header ul {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+
+    .header-fixed {
+        border-bottom: 0;
+    }
+
+    .head-separator {
+        height: 50px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .header {
+        background-color: rgba(255, 255, 255, 1);
+    }
+	.logo{
+		margin: 0 0 20px 20px;
+	}
+
+    .head-separator {
+        height: 30px;
+    }
+}
